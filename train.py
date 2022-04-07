@@ -479,7 +479,7 @@ if __name__ == '__main__':
     parser.add_argument('--adam', action='store_true', help='use torch.optim.Adam() optimizer') #是否使用adam优化器
     parser.add_argument('--sync-bn', action='store_true', help='use SyncBatchNorm, only available in DDP mode') #是否使用跨卡同步BN,在DDP模式使用
     parser.add_argument('--local_rank', type=int, default=-1, help='DDP parameter, do not modify') #DDP参数，请勿修改
-    parser.add_argument('--workers', type=int, default=4, help='maximum number of dataloader workers') #最大工作核心数
+    parser.add_argument('--workers', type=int, default=8, help='maximum number of dataloader workers') #最大工作核心数
     parser.add_argument('--project', default='runs/train', help='save to project/name') #训练模型的保存位置
     parser.add_argument('--entity', default=None, help='W&B entity')
     parser.add_argument('--name', default='exp', help='save to project/name') #模型保存的目录名称
